@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'labor_unionregular';
+    src: url('LaborUnion-Regular-webfont.eot');
+    src: url('LaborUnion-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LaborUnion-Regular-webfont.woff2') format('woff2'),
+         url('LaborUnion-Regular-webfont.woff') format('woff'),
+         url('LaborUnion-Regular-webfont.ttf') format('truetype'),
+         url('LaborUnion-Regular-webfont.svg#labor_unionregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
