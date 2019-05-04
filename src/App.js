@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import coffees              from './coffees';
-import Inventory            from './components/inventory-question';
+import Question             from './components/question';
 import OrderArrived         from './components/order-arrived';
-import Order1               from './components/order-1';
-import Order2               from './components/order-2';
 import Results              from './components/results';
 import './App.css';
 
@@ -49,7 +47,8 @@ class App extends Component {
     let questionIndex = this.state.questionIndex;
     if (this.state.questionIndex === 0) {
       return (
-        <Inventory 
+        <Question 
+          questionText="Current Inventory"
           coffeeName={coffees[coffeeIndex].name} 
           handleInputChange={(e) => { this.setState({input: e.target.value}) }}
           input={this.state.input}
@@ -71,14 +70,16 @@ class App extends Component {
         }}
       />;
     } else if (this.state.questionIndex === 2) {
-      return <Order1 
+      return <Question 
+        questionText="Last Week's Order"
         coffeeName={coffees[coffeeIndex].name} 
         handleInputChange={(e) => { this.setState({input: e.target.value}) }}
         input={this.state.input}
         nextCoffee={() => this.nextCoffee("order1")}
       />;
     } else if (this.state.questionIndex === 3) {
-      return <Order2 
+      return <Question 
+        questionText="Most Recent Order"
         coffeeName={coffees[coffeeIndex].name} 
         handleInputChange={(e) => { this.setState({input: e.target.value}) }}
         input={this.state.input}
