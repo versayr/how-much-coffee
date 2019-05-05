@@ -1,22 +1,35 @@
-.App {
+#root {
   display: flex;
-  flex-direction: column;
 }
 
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #4b3210;
-  color: #fce295;
+  color: #4b3210;
+}
+
+.app {
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 h1 {
   text-align: center;
 }
 
+.value {
+  text-align: center;
+  font-size: 72px;
+}
+
 input[type=number] {
   width: 100%;
   height: 35px;
   border: none;
+}
+
+.btn {
+  background-color: #fce295;
+  color: #4b3210;
 }
 
 ul {
