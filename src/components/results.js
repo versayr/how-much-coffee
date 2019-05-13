@@ -3,6 +3,7 @@ import React from 'react';
 const Results = (props) => {
   const resultsArray = props.coffees.map((coffee) => {
     let result = coffee.expectedUse - (coffee.inventory + coffee.order1 + coffee.order2);
+    result = Math.floor(result);
     if (result < 0) {
       result = 0;
     };
