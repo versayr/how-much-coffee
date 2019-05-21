@@ -31,87 +31,111 @@ class App extends Component {
       coffees,
       coffeeIndex,
       questionIndex,
-      value: 0
+      value: coffees[coffeeIndex][parameter]
     });
   };
 
-increaseValue() {
-  this.setState((prevState) => {
-    return {
-      value: prevState.value + 1
-    };
-  });
-};
-
-decreaseValue() {
-  this.setState((prevState) => {
-    if (prevState.value === 0) {
+  lastCoffee(parameter) {             
+    let coffees       = this.state.coffees;
+    let coffeeIndex   = this.state.coffeeIndex;
+    let questionIndex = this.state.questionIndex;
+    if (questionIndex === 0 && coffeeIndex === 0) {
       return;
-    } else { 
-      return {
-        value: prevState.value - 1
-      };
+    }
+    if (coffeeIndex === 0) {
+      coffeeIndex = coffees.length - 1;
+      questionIndex--;
+    } else {
+      coffeeIndex--;
     };
-  });
-};
+    this.setState({ 
+      coffees,
+      coffeeIndex,
+      questionIndex,
+      value: coffees[coffeeIndex][parameter], 
+    });
+  };
 
-questionSelector() {
-  let coffees       = this.state.coffees;
-  let coffeeIndex   = this.state.coffeeIndex;
-  let questionIndex = this.state.questionIndex;
-  if (this.state.questionIndex === 0) {
-    return <Question 
-      questionText="Current Inventory"
-      coffeeName={coffees[coffeeIndex].name} 
-      value={this.state.value}
-      decreaseValue={() => this.decreaseValue()}
-      increaseValue={() => this.increaseValue()}
-      nextCoffee={() => this.nextCoffee("inventory")}
-    />;
-  } else if (this.state.questionIndex === 1) {
-    return <OrderArrived
-      hasArrived={() => {
-        for (let i = 0; i < coffees.length; i++) {
-          coffees[i].order1 = 0;
+  increaseValue() {
+    this.setState((prevState) => {
+      return {
+        value: prevState.value + 1
+      };
+    });
+  };
+
+  decreaseValue() {
+    this.setState((prevState) => {
+      if (prevState.value === 0) {
+        return;
+      } else { 
+        return {
+          value: prevState.value - 1
         };
-        questionIndex = questionIndex + 2;
-        this.setState({ coffees, questionIndex });
-      }}
-      notArrived={() => {
-        questionIndex++;
-        this.setState({ questionIndex })
-      }}
-    />;
-  } else if (this.state.questionIndex === 2) {
-    return <Question 
-      questionText="Last Week's Order"
-      coffeeName={coffees[coffeeIndex].name} 
-      value={this.state.value}
-      decreaseValue={() => this.decreaseValue()}
-      increaseValue={() => this.increaseValue()}
-      nextCoffee={() => this.nextCoffee("order1")}
-    />;
-  } else if (this.state.questionIndex === 3) {
-    return <Question 
-      questionText="Most Recent Order"
-      coffeeName={coffees[coffeeIndex].name} 
-      value={this.state.value}
-      decreaseValue={() => this.decreaseValue()}
-      increaseValue={() => this.increaseValue()}
-      nextCoffee={() => this.nextCoffee("order2")}
-    />;
-  }
-  return <Results coffees={this.state.coffees} />;
-}
+      };
+    });
+  };
 
-render() {
-  return (
-    <div className="app">
-      <header><h1>How Much Coffee</h1></header>
-        {this.questionSelector()}
-    </div>
-  );
-}
+  questionSelector() {
+    let coffees       = this.state.coffees;
+    let coffeeIndex   = this.state.coffeeIndex;
+    let questionIndex = this.state.questionIndex;
+    if (this.state.questionIndex === 0) {
+      return <Question 
+        questionText="Current Inventory"
+        coffeeName={coffees[coffeeIndex].name} 
+        value={this.state.value}
+        decreaseValue={() => this.decreaseValue()}
+        increaseValue={() => this.increaseValue()}
+        lastCoffee={() => this.lastCoffee("inventory")}
+        nextCoffee={() => this.nextCoffee("inventory")}
+      />;
+    } else if (this.state.questionIndex === 1) {
+      return <OrderArrived
+        hasArrived={() => {
+          for (let i = 0; i < coffees.length; i++) {
+            coffees[i].order1 = 0;
+          };
+          questionIndex = questionIndex + 2;
+          this.setState({ coffees, questionIndex });
+        }}
+        notArrived={() => {
+          questionIndex++;
+          this.setState({ questionIndex })
+        }}
+      />;
+    } else if (this.state.questionIndex === 2) {
+      return <Question 
+        questionText="Last Week's Order"
+        coffeeName={coffees[coffeeIndex].name} 
+        value={this.state.value}
+        decreaseValue={() => this.decreaseValue()}
+        increaseValue={() => this.increaseValue()}
+        lastCoffee={() => this.lastCoffee("order1")}
+        nextCoffee={() => this.nextCoffee("order1")}
+      />;
+    } else if (this.state.questionIndex === 3) {
+      return <Question 
+        questionText="Most Recent Order"
+        coffeeName={coffees[coffeeIndex].name} 
+        value={this.state.value}
+        decreaseValue={() => this.decreaseValue()}
+        increaseValue={() => this.increaseValue()}
+        lastCoffee={() => this.lastCoffee("order2")}
+        nextCoffee={() => this.nextCoffee("order2")}
+      />;
+    }
+    return <Results coffees={this.state.coffees} />;
+  }
+
+  render() {
+    return (
+      <div className="app">
+        <header><h1>How Much Coffee</h1></header>
+          {this.questionSelector()}
+      </div>
+    );
+  }
 }
 
 export default App;

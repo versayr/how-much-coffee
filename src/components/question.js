@@ -14,8 +14,11 @@ const Question = (props) => {
           <Button onClick={props.decreaseValue}>-</Button>
           <Button onClick={props.increaseValue}>+</Button>
         </ButtonGroup>
+        <ButtonGroup>
+          <Button onClick={props.lastCoffee}>Back</Button>
+          <Button onClick={props.nextCoffee}>Next</Button>
+        </ButtonGroup>
       </Card>
-      <Button onClick={props.nextCoffee}>Next</Button>
     </div>
   );
 };

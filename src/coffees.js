@@ -2,33 +2,39 @@ export default function coffees() {
   var coffees = [
     {
       name: "South End Buttery Blend",
-      inventory : null,
-      order1 : null,
-      order2 : null,
-      expectedUse : 19
-    }, {
-      name: "French Roast",
-      inventory : null,
-      order1 : null,
-      order2 : null,
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
       expectedUse : 11
     }, {
+      name: "French Roast",
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
+      expectedUse : 11
+    }, {
+      name: "Mocha Java",
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
+      expectedUse : 8
+    }, {
       name: "Decaf Equator Blend",
-      inventory : null,
-      order1 : null,
-      order2 : null,
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
       expectedUse : 0
     }, {
       name: "Jaguar Espresso",
-      inventory : null,
-      order1 : null,
-      order2 : null,
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
       expectedUse : 11
     }, {
       name: "Decaf Espresso",
-      inventory : null,
-      order1 : null,
-      order2 : null,
+      inventory : 0,
+      order1 : 0,
+      order2 : 0,
       expectedUse : .75
     },
   ];
