@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'labor_unionsmall';
+    src: url('LaborUnion-Small-webfont.eot');
+    src: url('LaborUnion-Small-webfont.eot?#iefix') format('embedded-opentype'),
+         url('LaborUnion-Small-webfont.woff2') format('woff2'),
+         url('LaborUnion-Small-webfont.woff') format('woff'),
+         url('LaborUnion-Small-webfont.ttf') format('truetype'),
+         url('LaborUnion-Small-webfont.svg#labor_unionsmall') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
