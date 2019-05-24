@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/how-much-coffee/static/css/main.55ba8d26.chunk.css",
+    "main.css": "/how-much-coffee/static/css/main.148c7c8d.chunk.css",
     "main.js": "/how-much-coffee/static/js/main.f281c305.chunk.js",
     "main.js.map": "/how-much-coffee/static/js/main.f281c305.chunk.js.map",
     "runtime~main.js": "/how-much-coffee/static/js/runtime~main.2bfb3aa6.js",
@@ -8,8 +8,8 @@
     "static/js/2.55aa29cd.chunk.js": "/how-much-coffee/static/js/2.55aa29cd.chunk.js",
     "static/js/2.55aa29cd.chunk.js.map": "/how-much-coffee/static/js/2.55aa29cd.chunk.js.map",
     "index.html": "/how-much-coffee/index.html",
-    "precache-manifest.53482c6af1cdebcdebac52767cec4c21.js": "/how-much-coffee/precache-manifest.53482c6af1cdebcdebac52767cec4c21.js",
+    "precache-manifest.2b55d451b4226931dcf6bc5bb169a8a4.js": "/how-much-coffee/precache-manifest.2b55d451b4226931dcf6bc5bb169a8a4.js",
     "service-worker.js": "/how-much-coffee/service-worker.js",
-    "static/css/main.55ba8d26.chunk.css.map": "/how-much-coffee/static/css/main.55ba8d26.chunk.css.map"
+    "static/css/main.148c7c8d.chunk.css.map": "/how-much-coffee/static/css/main.148c7c8d.chunk.css.map"
   }
 }
