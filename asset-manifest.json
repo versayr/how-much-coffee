@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/how-much-coffee/static/css/main.8009ec66.chunk.css",
-    "main.js": "/how-much-coffee/static/js/main.d73116d4.chunk.js",
-    "main.js.map": "/how-much-coffee/static/js/main.d73116d4.chunk.js.map",
+    "main.css": "/how-much-coffee/static/css/main.55ba8d26.chunk.css",
+    "main.js": "/how-much-coffee/static/js/main.f281c305.chunk.js",
+    "main.js.map": "/how-much-coffee/static/js/main.f281c305.chunk.js.map",
     "runtime~main.js": "/how-much-coffee/static/js/runtime~main.2bfb3aa6.js",
     "runtime~main.js.map": "/how-much-coffee/static/js/runtime~main.2bfb3aa6.js.map",
     "static/js/2.55aa29cd.chunk.js": "/how-much-coffee/static/js/2.55aa29cd.chunk.js",
     "static/js/2.55aa29cd.chunk.js.map": "/how-much-coffee/static/js/2.55aa29cd.chunk.js.map",
     "index.html": "/how-much-coffee/index.html",
-    "precache-manifest.2a51d1e0a6652e43fbf74c04ffb3d285.js": "/how-much-coffee/precache-manifest.2a51d1e0a6652e43fbf74c04ffb3d285.js",
+    "precache-manifest.53482c6af1cdebcdebac52767cec4c21.js": "/how-much-coffee/precache-manifest.53482c6af1cdebcdebac52767cec4c21.js",
     "service-worker.js": "/how-much-coffee/service-worker.js",
-    "static/css/main.8009ec66.chunk.css.map": "/how-much-coffee/static/css/main.8009ec66.chunk.css.map"
+    "static/css/main.55ba8d26.chunk.css.map": "/how-much-coffee/static/css/main.55ba8d26.chunk.css.map"
   }
 }
