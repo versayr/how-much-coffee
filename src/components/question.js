@@ -10,7 +10,7 @@ const Question = (props) => {
         <h2>{props.questionText}:</h2>
         <h3>{props.coffeeName}</h3>
         <h2 className="value">{props.value}</h2>
-        <ButtonGroup>
+        <ButtonGroup className="mb-2">
           <Button onClick={props.decreaseValue}>-</Button>
           <Button onClick={props.increaseValue}>+</Button>
         </ButtonGroup>
